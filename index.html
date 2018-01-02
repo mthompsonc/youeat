@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouEat</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,7 +16,7 @@
   </head>
   <body>
     <!-- Inicio header -->
-    <header >
+    <header>
       <nav class="navbar navbar-fixed-top navbar-default">
         <div class="container-fluid">
           <!-- Menú hamburguesa versión móvil -->
@@ -28,8 +32,9 @@
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Quienes somos</a></li>
-              <li><a href="#">Usuario</a></li>
+              <li><a href="#" id="home">Home</a></li>
+              <li><a href="#" id="aboutus">About us</a></li>
+              <li><a href="#" id="user">My Profile</a></li>
               <li><a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in/ Log Out</a></li>
             </ul>
             <form class="navbar-form navbar-right">
@@ -43,12 +48,10 @@
     </header>
     <!-- Fin header -->
 
-    <!-- Primera sección imagen comidas -->
-    <section class="foods">
-    </section>
-    
-    <!-- Segunda sección perfil usuario -->
-    <section id="perfil" class="container">
+    <!-- Primera Sección Inicio -->
+    <section class="home" id="myHome">
+
+      <!-- Cuadro para agregar receta. -->
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
           <!-- Contenedor imagen -->
@@ -62,11 +65,12 @@
           <input type="text" class="receta">
           <!-- Botón desplegable dificultad -->
           <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel<span class="caret"></span>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel de Dificultad <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <span class="selLabel"></span>
               <li><a href="#">Fácil</a></li>
-              <li><a href="#">Medio</a></li>
+              <li><a href="#">Intermedio</a></li>
               <li><a href="#">Difícil</a></li>
             </ul>
           </div>
@@ -79,7 +83,35 @@
           </div>
         </div>
       </div>
+
+
+
     </section>
+
+    <!-- Segunda sección imagen comidas -->
+    <section id="about">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg foods1">
+        <h1 class="title1">You Eat</h1>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-12 col-lg-12 foods2">
+        <h1 class="title1">You Eat</h1>
+      </div>
+    </section>
+
+    <!-- Tercera sección perfil usuario -->
+    <section id="profile" class="container profile">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+
+        </div>
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+
+        </div>
+      </div>
+    </section>
+
+
+
 
 
 
