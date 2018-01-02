@@ -54,8 +54,11 @@
       <!-- Cuadro para agregar receta. -->
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-          <!-- Contenedor imagen -->
+          <!-- Cargar imagen -->
           <div class="imagen">
+            <form name="formulario" action="envio.php" method="post" enctype="multipart/form-data">
+            <input name="archivo" type="file" size="20"> 
+          </form>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
