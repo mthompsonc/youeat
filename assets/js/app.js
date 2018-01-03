@@ -1,24 +1,28 @@
 $(document).ready(function(){
   $('#myHome').hide();
   $('#about').show();
-  $('#profile').hide();
+  $('#profile2').hide();
+
+  $('#close').click(function(){
+    $('#modal').hide();
+  })
 
   $('#home').click(function(){
     $('#myHome').show();
     $('#about').hide();
-    $('#profile').hide();
+    $('#profile2').hide();
   })
 
   $('#aboutus').click(function(){
     $('#myHome').hide();
     $('#about').show();
-    $('#profile').hide();
+    $('#profile2').hide();
   })
 
   $('#user').click(function(){
     $('#myHome').hide();
     $('#about').hide();
-    $('#profile').show();
+    $('#profile2').hide();
   })
 
   $('#register').click(function(){
@@ -28,6 +32,34 @@ $(document).ready(function(){
 
 
 })
+
+/*Previsualizar imagen*/
+
+function archivo(evt) {
+      var files = evt.target.files; // FileList object
+
+        //Obtenemos la imagen del campo "file".
+      for (var i = 0, f; f = files[i]; i++) {
+           //Solo admitimos imágenes.
+           if (!f.type.match('image.*')) {
+                continue;
+           }
+
+           var reader = new FileReader();
+
+           reader.onload = (function(theFile) {
+               return function(e) {
+               // Creamos la imagen.
+                      document.getElementById("list").innerHTML = ['<img class="preview" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+               };
+           })(f);
+
+           reader.readAsDataURL(f);
+       }
+}
+
+      document.getElementById('files').addEventListener('change', archivo, false);
+
 
 function registrar(){
   var email= document.getElementById('email').value;
@@ -79,3 +111,22 @@ function observador(){
 }
 
 observador();
+
+function aparece(){
+  console.log("Holi holi aparece aparece")
+  var contenedor= document.getElementById('menu');
+  contenedor.innerHTML= `
+  <li><a href="#" id="profile">Perfil</a></li>
+  <li><a href="#" id="close" onclick="cerrar()">Cerrar Sesión</a></li>
+  `
+}
+
+function cerrar(){
+  firebase.auth().signOut()
+  .then(function(){
+    console.log('Saliendo..');
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+}

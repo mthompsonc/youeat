@@ -1,6 +1,4 @@
-
-
-.foods1{
+.foods1 {
   background-image: url(../img/cook-food-kitchen-eat-54455.jpg);
   width: 100%;
   min-height: 50vh;
@@ -33,13 +31,38 @@
   margin-top: 10.5vh;
 }
 
-.profile {
+.box {
   margin-top: 10.5vh;
-  width: 80%;
+  width: 60%;
+  margin-left: 20%;
   min-height: 10vh;
+  padding: 3.5vh;
   -webkit-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
   -moz-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
   box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+}
+
+.preview {
+  height: 20em;
+  border: 1px solid #9a9696;
+  margin: 10px 5px 0 0;
+}
+
+.homerow2 {
+  padding-left: 5em;
+}
+
+.upload {
+  margin-bottom: 1em;
+}
+
+.titulo, .receta {
+  max-width: 30em;
+  margin-bottom: 1em;
+}
+
+.post {
+  margin-top: 2em;
 }
 
 /*Modal*/
@@ -121,9 +144,10 @@
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
-.loginmodal-container a {
+.loginmodal-container button {
+  margin-left: 32%;
   text-decoration: none;
-  color: #666;
+  color: #4d4d4d;
   font-weight: 400;
   text-align: center;
   display: inline-block;
@@ -134,11 +158,7 @@
   padding-top: 1em;
 }
 
-.fondoModal1 {
-  background-color: #08AC9D
-}
-
-.loginmodal-container h4{
+.loginmodal-container h4 {
   text-align: center;
   padding-bottom: 1.2em;
 }

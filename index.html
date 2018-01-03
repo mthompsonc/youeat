@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,11 +49,10 @@
           <a class="navbar-brand" href="#"><strong>YOU EAT</strong></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" id="menu">
             <li><a href="#" id="home">Inicio</a></li>
             <li><a href="#" id="aboutus">Quiénes somos?</a></li>
-            <li><a href="#" id="user">Mi Perfil</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#login-modal">Registro</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#login-modal">Registro/Inicio Sesión</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
@@ -66,25 +66,27 @@
   <!-- Fin header -->
 
   <!-- Modal registro -->
-  <div class="fondoModal1">
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div id="modal">
+    <div class="modal" id="login-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
         <div class="loginmodal-container">
+          <div class="cerrar-modal">
+            <a href="#" id="close"><span class="glyphicon  glyphicon-remove" aria-hidden="true"></span></a>
+          </div>
           <h4>Registro</h4>
           <form>
             <input type="email" id="email" placeholder="Ingresa tu e-mail">
             <input type="password" id="password" placeholder="Ingresa contraseña">
           </form>
-          <a href="#" class="btn btn-warning" onclick="registrar()">Regístrate</a>
+          <button type="button" class="btn btn-warning" onclick="registrar()">Regístrate</button>
           <hr>
           <div class="login-help">
             <h4>Inicio de sesión</h4>
             <form>
               <input type="email" id="email2" placeholder="Ingresa tu e-mail">
-              <input type="password"
-              id="password2" placeholder="Ingresa contraseña">
+              <input type="password" id="password2" placeholder="Ingresa contraseña">
             </form>
-            <a href="#" class="btn btn-warning" onclick="ingreso()">Iniciar sesión</a>
+            <button type="button" class="btn btn-warning" onclick="ingreso()">Inicia Sesión</button>
           </div>
         </div>
       </div>
@@ -95,38 +97,44 @@
   <section class="home" id="myHome">
 
     <!-- Cuadro para agregar receta. -->
-    <div class="row">
+    <div class="row box">
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
         <!-- Cargar imagen -->
-        <div class="imagen">
-          <form name="formulario" action="envio.php" method="post" enctype="multipart/form-data">
-            <input name="archivo" type="file" size="20">
-          </form>
+        <div class="upload">
+          <input type="file" id="files" name="files[]"
+          <br>
+          <output id="list"></output>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <!-- Contenedor Título -->
-        <input type="text" class="titulo">
-        <!-- Contenedor receta -->
-        <input type="text" class="receta">
-        <!-- Botón desplegable dificultad -->
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel de Dificultad <span class="caret"></span>
-            </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <span class="selLabel"></span>
-            <li><a href="#">Fácil</a></li>
-            <li><a href="#">Intermedio</a></li>
-            <li><a href="#">Difícil</a></li>
-          </ul>
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 homerow2">
+        <div class="row">
+          <!-- Contenedor Título -->
+          <input type="text" class="titulo" placeholder="Título de receta">
+        </div>
+        <div class="row">
+          <!-- Contenedor receta -->
+          <textarea name="name" rows="8" cols="40" placeholder="Escribe tu receta" class="receta"></textarea>
+        </div>
+        <div class="row center-block">
+          <!-- Botón desplegable dificultad -->
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel de Dificultad <span class="caret"></span>
+              </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <span class="selLabel"></span>
+              <li><a href="#">Fácil</a></li>
+              <li><a href="#">Intermedio</a></li>
+              <li><a href="#">Difícil</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-        <!-- iconos -->
-        <div class="iconos">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      <div class="row">
+        <!-- botón para publicar -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <button type="button" class="btn btn-warning post center-block">Publicar</button>
         </div>
+
       </div>
     </div>
   </section>
@@ -140,16 +148,16 @@
       <h1 class="title1">You Eat</h1>
     </div>
     <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <p>Tu Red social donde encontraras recetas de comidas caseras, de rápida preparación en un sólo click. <br> Puedes crear tus propias recetas y compartirlas, seguir a otros usuarios y guardar tus favoritas. </p>
+      <div class="row">
+        <div class="col-12">
+          <p>Tu Red social donde encontrarás recetas de comidas caseras, de rápida preparación en un sólo click. <br> Puedes crear tus propias recetas y compartirlas, seguir a otros usuarios y guardar tus favoritas. </p>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
   <!-- Tercera sección perfil usuario -->
-  <section id="profile" class="container profile">
+  <section id="profile2" class="container box">
     <div class="row">
       <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
       </div>
