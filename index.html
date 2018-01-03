@@ -35,7 +35,7 @@
               <li><a href="#" id="home">Home</a></li>
               <li><a href="#" id="aboutus">About us</a></li>
               <li><a href="#" id="user">My Profile</a></li>
-              <li><a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in/ Log Out</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#login-modal">Log in/ Log Out</a></li>
             </ul>
             <form class="navbar-form navbar-right">
               <div class="form-group">
@@ -47,6 +47,27 @@
       </nav>
     </header>
     <!-- Fin header -->
+
+    <!-- Modal registro -->
+  <div class="fondoModal1">
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="loginmodal-container">
+        <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+        </form>
+        <a href="#" class="btn btn-warning">LOGING</a>
+        <div class="login-help">
+          <a href="#">Registrar</a>
+          <a class="text-danger" href="#">Click here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- Fin modal -->
+
 
     <!-- Primera Sección Inicio -->
     <section class="home" id="myHome">
