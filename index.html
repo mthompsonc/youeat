@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouEat</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
 
 
-  </head>
-  <body>
-    <!-- Inicio header -->
-    <header>
-      <nav class="navbar navbar-fixed-top navbar-default">
-        <div class="container-fluid">
-          <!-- Menú hamburguesa versión móvil -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouEat</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Iniciando Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAd2dIigxv_WWB3LnZ5eGojxzj1Zj8D1D0",
+      authDomain: "project-you-eat.firebaseapp.com",
+      databaseURL: "https://project-you-eat.firebaseio.com",
+      projectId: "project-you-eat",
+      storageBucket: "project-you-eat.appspot.com",
+      messagingSenderId: "146202374387"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- Inicio header -->
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container-fluid">
+        <!-- Menú hamburguesa versión móvil -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
           <!-- Menú versión web -->
+
             <a class="navbar-brand" href="#"><strong>YOU EAT</strong></a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,95 +66,107 @@
             </form>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Fin header -->
+    </nav>
+  </header>
+  <!-- Fin header -->
+
 
     <!-- Modal registro -->
-    <div class="fondoModal1">
-      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-          <div class="loginmodal-container">
+
+
+  <!-- Modal registro -->
+  <div class="fondoModal1">
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h4>Registro</h4>
+          <form>
+            <input type="email" id="email" placeholder="Ingresa tu e-mail">
+            <input type="password" id="password" placeholder="Ingresa contraseña">
+          </form>
+          <a href="#" class="btn btn-warning" onclick="registrar()">Regístrate</a>
+          <hr>
+          <div class="login-help">
+            <h4>Inicio de sesión</h4>
             <form>
-              <input type="text" name="user" placeholder="Username">
-              <input type="password" name="pass" placeholder="Password">
+              <input type="email" id="email2" placeholder="Ingresa tu e-mail">
+              <input type="password"
+              id="password2" placeholder="Ingresa contraseña">
             </form>
-            <a href="#" class="btn btn-warning">LOGING</a>
-            <div class="login-help">
-              <a href="#">Registrar</a>
-              <a class="text-danger" href="#">Click here</a>
-            </div>
+            <a href="#" class="btn btn-warning" onclick="ingreso()">Iniciar sesión</a>
+
           </div>
         </div>
       </div>
     </div>
-    <!-- Fin modal -->
 
 
-    <!-- Primera Sección Inicio -->
-    <section class="home" id="myHome">
 
-      <!-- Cuadro para agregar receta. -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-          <!-- Cargar imagen -->
-          <div class="imagen">
-            <form name="formulario" action="envio.php" method="post" enctype="multipart/form-data">
-            <input name="archivo" type="file" size="20"> 
+
+  <!-- Primera Sección Inicio -->
+  <section class="home" id="myHome">
+
+    <!-- Cuadro para agregar receta. -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <!-- Cargar imagen -->
+        <div class="imagen">
+          <form name="formulario" action="envio.php" method="post" enctype="multipart/form-data">
+            <input name="archivo" type="file" size="20">
           </form>
-          </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <!-- Contenedor Título -->
-          <input type="text" class="titulo">
-          <!-- Contenedor receta -->
-          <input type="text" class="receta">
-          <!-- Botón desplegable dificultad -->
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel de Dificultad <span class="caret"></span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <!-- Contenedor Título -->
+        <input type="text" class="titulo">
+        <!-- Contenedor receta -->
+        <input type="text" class="receta">
+        <!-- Botón desplegable dificultad -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Nivel de Dificultad <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <span class="selLabel"></span>
-              <li><a href="#">Fácil</a></li>
-              <li><a href="#">Intermedio</a></li>
-              <li><a href="#">Difícil</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-          <!-- iconos -->
-          <div class="iconos">
-            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <span class="selLabel"></span>
+            <li><a href="#">Fácil</a></li>
+            <li><a href="#">Intermedio</a></li>
+            <li><a href="#">Difícil</a></li>
+          </ul>
         </div>
       </div>
-
-
-
-    </section>
-
-    <!-- Segunda sección imagen comidas -->
-    <section id="about">
-      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg foods1">
-        <h1 class="title1">You Eat</h1>
-      </div>
-      <div class="hidden-xs hidden-sm col-md-12 col-lg-12 foods2">
-        <h1 class="title1">You Eat</h1>
-      </div>
-    </section>
-
-    <!-- Tercera sección perfil usuario -->
-    <section id="profile" class="container profile">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-
-        </div>
-        <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
-
+      <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+        <!-- iconos -->
+        <div class="iconos">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </div>
       </div>
-    </section>
+    </div>
+
+
+
+  </section>
+
+  <!-- Segunda sección imagen comidas -->
+  <section id="about">
+    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg foods1">
+      <h1 class="title1">You Eat</h1>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-12 col-lg-12 foods2">
+      <h1 class="title1">You Eat</h1>
+    </div>
+  </section>
+
+  <!-- Tercera sección perfil usuario -->
+  <section id="profile" class="container profile">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+
+      </div>
+      <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+
+      </div>
+    </div>
+  </section>
 
 
 
@@ -143,7 +175,8 @@
 
 
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+
 </html>

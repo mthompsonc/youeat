@@ -1,13 +1,14 @@
 
+
 .foods1{
   background-image: url(../img/cook-food-kitchen-eat-54455.jpg);
   width: 100%;
   min-height: 50vh;
-  background-size:125%;
+  background-size: 125%;
   background-repeat: no-repeat;
 }
 
-.title1{
+.title1 {
   color: #FFFFFF;
   font-size: 7vh;
   text-align: center;
@@ -18,7 +19,7 @@
   background-image: url(../img/cook-food-kitchen-eat-54455.jpg);
   width: 100%;
   min-height: 70vh;
-  background-size:100%;
+  background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
 }
@@ -28,20 +29,21 @@
   margin-top: -0.6em;
 }
 
-.home{
+.home {
   margin-top: 10.5vh;
 }
 
-.profile{
+.profile {
   margin-top: 10.5vh;
   width: 80%;
   min-height: 10vh;
-  -webkit-box-shadow: 5px 5px 26px -3px rgba(158,158,158,0.91);
-  -moz-box-shadow: 5px 5px 26px -3px rgba(158,158,158,0.91);
-  box-shadow: 5px 5px 26px -3px rgba(158,158,158,0.91);
+  -webkit-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+  -moz-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+  box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
 }
 
 /*Modal*/
+
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -65,9 +67,9 @@
   position: relative;
 }
 
-.loginmodal-container input[type=text], input[type=password] {
-  height: 44px;
-  font-size: 16px;
+.loginmodal-container input[type=email], input[type=password], input[type=email2], input[type=password2] {
+  height: 2em;
+  font-size: 14px;
   width: 100%;
   margin-bottom: 10px;
   -webkit-appearance: none;
@@ -83,9 +85,9 @@
 .loginmodal-container input[type=text]:hover, input[type=password]:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .loginmodal {
@@ -95,8 +97,8 @@
   font-weight: 700;
   height: 36px;
   padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
+  /* border-radius: 3px; */
+  /* -webkit-user-select: none;
   user-select: none; */
 }
 
@@ -104,7 +106,7 @@
   /* border: 1px solid #3079ed; */
   border: 0px;
   color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
   background-color: #4d90fe;
   padding: 17px 0px;
   font-size: 14px;
@@ -114,7 +116,7 @@
 .loginmodal-submit:hover {
   /* border: 1px solid #2f5bb7; */
   border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   background-color: #357ae8;
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
@@ -126,12 +128,17 @@
   text-align: center;
   display: inline-block;
   transition: opacity ease 0.5s;
-} 
+}
 
-.login-help{
+.login-help {
   padding-top: 1em;
 }
 
 .fondoModal1 {
   background-color: #08AC9D
+}
+
+.loginmodal-container h4{
+  text-align: center;
+  padding-bottom: 1.2em;
 }
