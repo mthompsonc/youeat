@@ -36,22 +36,58 @@ var data = [
     "tipo": "Postre"
     },
     {
-    "nombre": "",
-    "foto": "",
-    "porciones": "",
-    "ingredientes": "",
-    "receta": "",
-    "usuario": "",
-    "tipo": ""
-    },
-    {
-    "nombre": "",
-    "foto": "",
-    "porciones": "",
-    "ingredientes": "",
-    "receta": "",
-    "usuario": "",
-    "tipo": ""
-    },
+  "nombre": "Tacos de carne",
+  "foto": "img/tacos.jpg",
+  "porciones": "6 porciones",
+  "ingredientes": "6 Tortillas de maíz, 1 Cebolla, 1 Kilo de Carne, 3 Tomates, 1 Pimienta, pizca de Sal, Aceite y Especies para sazonar.",
+  "receta": "Corta la carne en trozos pequeños y sazónala al gusto. Pica la cebolla y el tomate y sofríe en un sartén con un poco de aceite. Coloca las tortillas de maíz sobre una tabla y agrega la mezcla del sofrito y la carne de forma uniforme. Enrolla las tortillas de maíz de manera que quede un taco, si lo deseas puedes amarrar por en medio para sujetar. Fríe con el aceite, de manera que los mismos estén tostados. Sirve con salsa y queso.",
+  "usuario": "",
+  "tipo": "plato de fondo"
+  },
+  {
+  "nombre": "Licuado de yogurt con frutillas y kiwi",
+  "foto": "img/Licuado-frutas.jpg",
+  "porciones": "2",
+  "ingredientes": "1 plátano, 6 fresas, 1 kiwi, 100 gramos de yogurt de vainilla, 90 mililitros de jugo de naranja, 90 mililitros de jugo de piña",
+  "receta": "Coloca todos los ingredientes en el vaso de la licuadora, y licúa hasta lograr una consistencia cremosa.",
+  "usuario": "",
+  "tipo": "Bebestible"
+  },
+  {
+  "nombre": "Spaghetti con salsa blanca y jamón",
+  "foto": "img/alfredo.jpg",
+  "porciones": "4 porciones",
+  "ingredientes": "400 gr Spaghetti, Sal a gusto, 10 gr Mantequilla, 2 Rebanadas, Perejil a gusto, 4 Cucharadas Harina sin polvos de hornear, Queso rallado, 2 Tazas de Leche blanca",
+  "receta": "Hervir agua en una olla grande, agregar una cantidad generosa de sal. Agregar los spaghetti y cocinar hasta que quede al dente. Saltear el jamón en trocitos. Agregar Leche, harina, mantequilla hasta que espese. Remover para que no se formen grumos. Agregar el spaghetti y dejar cocinar por 5 minutos. Agregar un poco de queso rallado y perejil, y ¡a disfrutar!",
+  "usuario": "",
+  "tipo": "Plato de fondo"
+  },
+  {
+  "nombre": "Pudín de chocolate",
+  "foto": "img/pudin-chocolate.jpg",
+  "porciones": "",
+  "ingredientes": "1 plátano y Chocolate en polvo",
+  "receta": "Colocar el plátano en la nevera por unas dos o tres horas. Luego, corta el plátano en pequeñas rodajas, y comienza a realizar un sabroso puré de plátano, intentando no dejar ni un solo grumo. Añade la cantidad de chocolate en polvo que desees, dependiendo de qué tan amargo prefieras el pudín, y vuelve a revolver hasta integrar por completo todos los ingredientes.Nuevamente lleva a la nevera por unas dos o tres horas más. Por último, si gustas también puedes incorporar un poco de azúcar a dicho sencillísimo postre y ¡listo! Y no olvides decorar con unas pocas rodajas de plátano para lograr una bonita presentación.",
+  "usuario": "",
+  "tipo": "Postre"
+  },
+  {
+  "nombre": "",
+  "foto": "",
+  "porciones": "",
+  "ingredientes": "",
+  "receta": "",
+  "usuario": "",
+  "tipo": ""
+  },
+  {
+  "nombre": "",
+  "foto": "",
+  "porciones": "",
+  "ingredientes": "",
+  "receta": "",
+  "usuario": "",
+  "tipo": ""
+  },
 
 ]
