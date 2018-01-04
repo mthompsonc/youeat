@@ -107,6 +107,6 @@ var data = [
   "receta": "En un bol poner el zapallo y moler hasta obtener un puré y agrega la cantidad necesaria de harina para formar una masa suave (aprox. 2 tazas), y la manteca DERRETIDA. Mezclar para formar una masa. Amasa un poco y uslerea de 1 /2 cm de grosor. Corta las sopaipillas con un molde redondo y pincha con un tenedor para q no se inflen al freírlas. En un sartén calienta el aceite a fuego medio y freír las sopaipillas por ambos lados hasta dorar. Estila en papel absorbente y servir.",
   "usuario": "",
   "tipo": "Panaderia/Pasteleria"
-  },
+  }
 
 ]
