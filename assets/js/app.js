@@ -31,7 +31,9 @@ function registrar(){
   var email= document.getElementById('email').value;
   var password= document.getElementById('password').value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(()=>{
+     location.reload();
+  }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -44,8 +46,9 @@ function registrar(){
 function ingreso(){
   var email2= document.getElementById('email2').value;
   var password2= document.getElementById('password2').value;
-
-  firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(email2, password2).then(()=>{
+     location.reload();
+  }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -60,6 +63,7 @@ function observador(){
   if (user) {
     aparece();
     console.log('existe usuario activo')
+    useractive();
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
@@ -71,8 +75,7 @@ function observador(){
     // ...
   } else {
     console.log('no existe usuario activo')
-    // User is signed out.
-    // ...
+    nouser();
   }
 });
 }
@@ -100,47 +103,46 @@ function aparece(){
       $('#profile2').show();
     })
 
+
 }
 
 function cerrar(){
   firebase.auth().signOut()
   .then(function(){
     console.log('Saliendo..');
+     location.reload();
   })
   .catch(function(error){
     console.log(error);
   })
 }
 
-
-$(document).ready(function(){
-  $('#about').show();
-  $('#myHome').hide();
-  $('#profile2').hide();
-/*
-  $('#close').click(function(){
-    $('#modal').hide();
-    $('.modal-backdrop').hide();
-  })
-*/
-
-
+function nouser(){
   $('#aboutus').click(function(){
-    $('#myHome').hide();
     $('#about').show();
-    $('#profile2').hide();
-  })
-
-  $('#user').click(function(){
     $('#myHome').hide();
-    $('#about').hide();
     $('#profile2').hide();
   })
 
   $('#register').click(function(){
     $('#loginModal').show();
-    console.log("holi")
+    console.log("holi");
   })
+}
+
+  function useractive(){
+    $('#about').hide();
+    $('#myHome').show();
+    $('#profile2').hide();
+  }
+
+
+
+$(document).ready(function(){
+
+  $('#about').show();
+  $('#myHome').hide();
+  $('#profile2').hide();
 
 
   })
