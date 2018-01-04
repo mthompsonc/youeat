@@ -10,7 +10,7 @@ $(document).ready(function(){
   $('#home').click(function(){
     $('#myHome').show();
     $('#about').hide();
-    $('#profile2').hide();
+    $('#profile2').show();
   })
 
   $('#aboutus').click(function(){

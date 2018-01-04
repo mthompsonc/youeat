@@ -1,35 +1,37 @@
-.foods1 {
-  background-image: url(../img/cook-food-kitchen-eat-54455.jpg);
-  width: 100%;
-  min-height: 50vh;
-  background-size: 125%;
-  background-repeat: no-repeat;
-}
+/*Título segunda sección*/
 
 .title1 {
   color: #FFFFFF;
   font-size: 7vh;
-  text-align: center;
-  line-height: 4;
+  margin-top: 2em;
+  margin-bottom: 0.2em;
 }
+
+/*Párrafo segunda sección*/
+
+#about p {
+  color: #fff;
+  font-size: 2em;
+}
+
+/*Imagen segunda sección*/
 
 .foods2 {
   background-image: url(../img/cook-food-kitchen-eat-54455.jpg);
   width: 100%;
-  min-height: 70vh;
-  background-size: 100%;
+  min-height: 100vh;
+  background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
-.logo {
-  width: 2.4em;
-  margin-top: -0.6em;
-}
+/*Sección inicio*/
 
 .home {
   margin-top: 10.5vh;
 }
+
+/*Cuadro para agregar receta*/
 
 .box {
   margin-top: 10.5vh;
@@ -41,6 +43,8 @@
   -moz-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
   box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
 }
+
+/*Título y receta*/
 
 .preview {
   height: 20em;
@@ -163,8 +167,18 @@
   padding-bottom: 1.2em;
 }
 
-#about p {
-  color: #777;
-  font-size: 2em;
-  text-align: center;
+/*Tercera sección perfil usuario*/
+#profile2 {
+  padding-top:30px;
 }
+
+.glyphicon {
+  margin-bottom: 10px;margin-right: 10px;
+}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
