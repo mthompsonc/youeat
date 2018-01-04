@@ -139,10 +139,7 @@ function nouser(){
 
 
 $(document).ready(function(){
-
   $('#about').show();
   $('#myHome').hide();
   $('#profile2').hide();
-
-
   })
