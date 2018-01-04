@@ -1,13 +1,13 @@
 $(document).ready(function(){
-  $('#myHome').hide();
   $('#about').show();
+  $('#myHome').hide();
   $('#profile2').hide();
-
+/*
   $('#close').click(function(){
     $('#modal').hide();
     $('.modal-backdrop').hide();
   })
-
+*/
   $('#home').click(function(){
     $('#myHome').show();
     $('#about').hide();
@@ -27,8 +27,7 @@ $(document).ready(function(){
   })
 
   $('#register').click(function(){
-    $('#login-modal').show();
-    $('.modal-backdrop').show();
+    $('#loginModal').show();
     console.log("holi")
   })
 
@@ -119,6 +118,7 @@ function aparece(){
   console.log("Holi holi aparece aparece")
   var contenedor= document.getElementById('menu');
   contenedor.innerHTML= `
+  <li><a href="#" id="home">Inicio</a></li>
   <li><a href="#" id="profile">Perfil</a></li>
   <li><a href="#" id="close" onclick="cerrar()">Cerrar Sesión</a></li>
   `
