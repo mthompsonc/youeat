@@ -92,6 +92,7 @@ function ingreso(){
 function observador(){
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    aparece();
     console.log('existe usuario activo')
     // User is signed in.
     var displayName = user.displayName;
