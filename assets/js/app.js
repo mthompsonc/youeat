@@ -1,38 +1,3 @@
-$(document).ready(function(){
-  $('#about').show();
-  $('#myHome').hide();
-  $('#profile2').hide();
-/*
-  $('#close').click(function(){
-    $('#modal').hide();
-    $('.modal-backdrop').hide();
-  })
-*/
-  $('#home').click(function(){
-    $('#myHome').show();
-    $('#about').hide();
-    $('#profile2').show();
-  })
-
-  $('#aboutus').click(function(){
-    $('#myHome').hide();
-    $('#about').show();
-    $('#profile2').hide();
-  })
-
-  $('#user').click(function(){
-    $('#myHome').hide();
-    $('#about').hide();
-    $('#profile2').hide();
-  })
-
-  $('#register').click(function(){
-    $('#loginModal').show();
-    console.log("holi")
-  })
-
-
-})
 
 /*Previsualizar imagen*/
 
@@ -122,6 +87,19 @@ function aparece(){
   <li><a href="#" id="profile">Perfil</a></li>
   <li><a href="#" id="close" onclick="cerrar()">Cerrar Sesión</a></li>
   `
+
+    $('#home').click(function(){
+      $('#myHome').show();
+      $('#about').hide();
+      $('#profile2').hide();
+    })
+
+    $('#profile').click(function(){
+      $('#myHome').hide();
+      $('#about').hide();
+      $('#profile2').show();
+    })
+
 }
 
 function cerrar(){
@@ -133,3 +111,36 @@ function cerrar(){
     console.log(error);
   })
 }
+
+
+$(document).ready(function(){
+  $('#about').show();
+  $('#myHome').hide();
+  $('#profile2').hide();
+/*
+  $('#close').click(function(){
+    $('#modal').hide();
+    $('.modal-backdrop').hide();
+  })
+*/
+
+
+  $('#aboutus').click(function(){
+    $('#myHome').hide();
+    $('#about').show();
+    $('#profile2').hide();
+  })
+
+  $('#user').click(function(){
+    $('#myHome').hide();
+    $('#about').hide();
+    $('#profile2').hide();
+  })
+
+  $('#register').click(function(){
+    $('#loginModal').show();
+    console.log("holi")
+  })
+
+
+  })

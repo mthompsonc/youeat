@@ -4,7 +4,7 @@ var data = [
     "foto": "img/pollo-arvejado.jpg",
     "porciones": "4 porciones",
     "ingredientes": "4-5 tutros de pollo, 1 cebolla en pluma, 2 zanahorias cortadas en rodajas, 1/2 pimentón verde en cubos, 2 dientes de ajo machacados, 2 tazas de agua caliente, 1 hoja de laurel, 1 taza de arvejas (use congeladas), aceite, sal y pimienta."
-    "receta":"En una sartén calentar 2 cucharadas de aceite a fuego medio-alto. Dorar las presas de pollo 3 minutos por lado. Sacar de la sartén y dejar en un plato. En la misma sartén dorar la cebolla revolviendo por 5 minutos. Agregar la zanahoria, pimentón, y ajo dorar por 1 minuto. Regresar el pollo a la sartén y agregar el caldo y las arvejas todavía congeladas. Tapar y cocinar por 25-30 minutos a fuego medio, hasta que el pollo este cocido.",
+    "receta":"En una sartén calentar aceite a fuego medio-alto. Dorar las presas de pollo 3 minutos por lado. Sacar de la sartén y dejar en un plato. En la misma sartén dorar la cebolla revolviendo por 5 minutos. Agregar la zanahoria, pimentón, y ajo dorar por 1 minuto. Regresar el pollo a la sartén y agregar el caldo y las arvejas todavía congeladas. Tapar y cocinar por 25-30 minutos a fuego medio, hasta que el pollo este cocido.",
     "usuario": "",
     "tipo": "plato de fondo",
     },
@@ -70,6 +70,15 @@ var data = [
   "receta": "Colocar el plátano en la nevera por unas dos o tres horas. Luego, corta el plátano en pequeñas rodajas, y comienza a realizar un sabroso puré de plátano, intentando no dejar ni un solo grumo. Añade la cantidad de chocolate en polvo que desees, dependiendo de qué tan amargo prefieras el pudín, y vuelve a revolver hasta integrar por completo todos los ingredientes.Nuevamente lleva a la nevera por unas dos o tres horas más. Por último, si gustas también puedes incorporar un poco de azúcar a dicho sencillísimo postre y ¡listo! Y no olvides decorar con unas pocas rodajas de plátano para lograr una bonita presentación.",
   "usuario": "",
   "tipo": "Postre"
+  },
+  {
+  "nombre": "",
+  "foto": "",
+  "porciones": "",
+  "ingredientes": "",
+  "receta": "",
+  "usuario": "",
+  "tipo": ""
   },
   {
   "nombre": "",
