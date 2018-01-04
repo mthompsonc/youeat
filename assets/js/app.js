@@ -64,6 +64,7 @@ function registrar() {
 
 }
 
+/* Función para ingresar el usuario */
 function ingreso() {
   var email2 = document.getElementById('email2').value;
   var password2 = document.getElementById('password2').value;
@@ -79,6 +80,7 @@ function ingreso() {
   });
 }
 
+/* Observa qué sucede con el usuario, si se conectó o no, si existe verificación del email, etc. */
 function observador() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -103,6 +105,7 @@ function observador() {
 
 observador();
 
+/* Esta función reemplaza botones, siempre y cuando el usuario esté activo. */
 function aparece() {
   console.log("Holi holi aparece aparece")
   var contenedor = document.getElementById('menu');
@@ -127,6 +130,7 @@ function aparece() {
 
 }
 
+
 function cerrar() {
   firebase.auth().signOut()
     .then(function() {
@@ -137,7 +141,7 @@ function cerrar() {
       console.log(error);
     })
 }
-
+/* se activa cuando no hay usuario logueado */
 function nouser() {
   $('#aboutus').click(function() {
     $('#about').show();
@@ -150,7 +154,7 @@ function nouser() {
     console.log("holi");
   })
 }
-
+/* se activa cuando hay un usuario logueado*/
 function useractive() {
   $('#about').hide();
   $('#myHome').show();
