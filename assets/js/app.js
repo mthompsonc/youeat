@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $('#close').click(function(){
     $('#modal').hide();
+    $('.modal-backdrop').hide();
   })
 
   $('#home').click(function(){
@@ -26,7 +27,8 @@ $(document).ready(function(){
   })
 
   $('#register').click(function(){
-    $('#register-modal').show();
+    $('#login-modal').show();
+    $('.modal-backdrop').show();
     console.log("holi")
   })
 
