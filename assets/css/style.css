@@ -44,6 +44,17 @@
   box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
 }
 
+.box2 {
+  margin-top: 10.5vh;
+  width: 65%;
+  margin-left: 20%;
+  min-height: 10vh;
+  padding: 3.5vh;
+  -webkit-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+  -moz-box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+  box-shadow: 5px 5px 26px -3px rgba(158, 158, 158, 0.91);
+}
+
 /*Título y receta*/
 
 .homerow2 {
@@ -87,4 +98,3 @@ color: #999;
   max-width: 100%;
 
 }
-
