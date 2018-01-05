@@ -46,12 +46,6 @@
 
 /*Título y receta*/
 
-.preview {
-  height: 20em;
-  border: 1px solid #9a9696;
-  margin: 10px 5px 0 0;
-}
-
 .homerow2 {
   padding-left: 5em;
 }
@@ -60,13 +54,16 @@
   margin-bottom: 1em;
 }
 
-.titulo, .receta {
-  max-width: 30em;
-  margin-bottom: 1em;
-}
-
 .post {
   margin-top: 2em;
+}
+
+.photobox{
+  margin-top: 3em;
+  margin-bottom: 3em;
+  max-width: 30em;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /*Tercera sección perfil usuario*/

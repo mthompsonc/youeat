@@ -141,6 +141,32 @@ $(document).ready(function(){
   $('#profile2').hide();
 })
 
+/*
+* Función para postear recetas
+*/
+
+  $('#post').click(function(){
+    //Guardando todos los valores en una variable.
+    var name= $('#title').val();
+    var photo= $('#urlInput').val();
+    var portion= $('#portion').val();
+    var ingredients= $('#ingredients').val();
+    var recipe= $('#recipe').val();
+    var categorias1= $('#categorias1').val();
+    //Vaciando los  input.
+    $('#title').val('');
+    $('#urlInput').val('');
+    $('#portion').val('');
+    $('#ingredients').val('');
+    $('#recipe').val('');
+    $('categorias1').val('0');
+
+    //Contenedor donde irán los nuevos comentarios.
+    var contenedor= $('.newpost');
+    //Ingresando comentario en una caja de comentario.
+    contenedor.append('<div class=box> <h3 class= text-center>'+ name + '</h3> <div> <img class="photobox center-block" src= ' + photo + '  alt=...> </div> <h6><b>Porciones:</b> ' + portion + '</h6> <p><b> Ingredientes:</b> ' + ingredients + '</p> <p><b> Instrucciones:</b> ' + recipe + '</p><p><b> Tipo de Comida:</b> ' + categorias1 + '</p></div>' );
+  })
+
 /** Función que muestra las recetas*/
 
 console.log(data);
@@ -165,14 +191,11 @@ $('#categorias').on('change', function(){
         bebestible.children().remove();
         panaderiaPasteleria.children().remove();
         everyone.children().remove();
-        platoFondo.append('<div class="row">' +
-                        '<div class= "col-md-12 text-center">'+
-                        '<img src="assets/' + data[i].foto + '">' +
-                        '<h3>' + data[i].nombre + '</h3>' +
-                        '<p>Ingredientes: ' + data[i].ingredientes + '</p>' +
-                        '<p>Receta: ' + data[i].receta + '</p>' + '<p>Sede: ' + data[i].tipo + '</p>' +
-                          '</div>' +
-                        '</div>')
+        platoFondo.append('<div class=box> <h3 class= text-center>'+ data[i].nombre + '</h3> <div> <img class="photobox center-block" src="assets/' + data[i].foto + '"> </div> <h6><b>Porciones:</b> ' + data[i].porciones + '</h6> <p><b> Ingredientes:</b> ' + data[i].ingredientes + '</p> <p><b> Instrucciones:</b> ' + data[i].receta + '</p><p><b> Tipo de Comida:</b> ' + data[i].tipo + '</p></div>')
+
+                        /*
+( );
+                        */
       }
     }
   }
@@ -184,14 +207,7 @@ $('#categorias').on('change', function(){
         bebestible.children().remove();
         panaderiaPasteleria.children().remove();
         everyone.children().remove();
-        postre.append('<div class="row">' +
-                        '<div class= "col-md-12 text-center">'+
-                        '<img src="assets/' + data[i].foto + '">' +
-                        '<h3>' + data[i].nombre + '</h3>' +
-                        '<p>Ingredientes: ' + data[i].ingredientes + '</p>' +
-                        '<p>Receta: ' + data[i].receta + '</p>' + '<p>Sede: ' + data[i].tipo + '</p>' +
-                          '</div>' +
-                        '</div>')
+        postre.append('<div class=box> <h3 class= text-center>'+ data[i].nombre + '</h3> <div> <img class="photobox center-block" class= photobox src="assets/' + data[i].foto + '"> </div> <h6><b>Porciones:</b> ' + data[i].porciones + '</h6> <p><b> Ingredientes:</b> ' + data[i].ingredientes + '</p> <p><b> Instrucciones:</b> ' + data[i].receta + '</p><p><b> Tipo de Comida:</b> ' + data[i].tipo + '</p></div>')
       }
     }
   }
@@ -203,14 +219,7 @@ $('#categorias').on('change', function(){
         postre.children().remove();
         panaderiaPasteleria.children().remove();
         everyone.children().remove();
-        bebestible.append('<div class="row">' +
-                        '<div class= "col-md-12 text-center">'+
-                        '<img src="assets/' + data[i].foto + '">' +
-                        '<h3>' + data[i].nombre + '</h3>' +
-                        '<p>Ingredientes: ' + data[i].ingredientes + '</p>' +
-                        '<p>Receta: ' + data[i].receta + '</p>' + '<p>Sede: ' + data[i].tipo + '</p>' +
-                          '</div>' +
-                        '</div>')
+        bebestible.append('<div class=box> <h3 class= text-center>'+ data[i].nombre + '</h3> <div> <img class="photobox center-block" src="assets/' + data[i].foto + '"> </div> <h6><b>Porciones:</b> ' + data[i].porciones + '</h6> <p><b> Ingredientes:</b> ' + data[i].ingredientes + '</p> <p><b> Instrucciones:</b> ' + data[i].receta + '</p><p><b> Tipo de Comida:</b> ' + data[i].tipo + '</p></div>')
       }
     }
   }
@@ -222,14 +231,7 @@ $('#categorias').on('change', function(){
         postre.children().remove();
         bebestible.children().remove();
         everyone.children().remove();
-        panaderiaPasteleria.append('<div class="row">' +
-                        '<div class= "col-md-12 text-center">'+
-                        '<img src="assets/' + data[i].foto + '">' +
-                        '<h3>' + data[i].nombre + '</h3>' +
-                        '<p>Ingredientes: ' + data[i].ingredientes + '</p>' +
-                        '<p>Receta: ' + data[i].receta + '</p>' + '<p>Sede: ' + data[i].tipo + '</p>' +
-                          '</div>' +
-                        '</div>')
+        panaderiaPasteleria.append('<div class=box> <h3 class= text-center>'+ data[i].nombre + '</h3> <div> <img class="photobox center-block" src="assets/' + data[i].foto + '"> </div> <h6><b>Porciones:</b> ' + data[i].porciones + '</h6> <p><b> Ingredientes:</b> ' + data[i].ingredientes + '</p> <p><b> Instrucciones:</b> ' + data[i].receta + '</p><p><b> Tipo de Comida:</b> ' + data[i].tipo + '</p></div>')
       }
     }
   }
@@ -240,37 +242,7 @@ $('#categorias').on('change', function(){
     bebestible.children().remove();
     panaderiaPasteleria.children().remove();
     for (var i = 0; i < data.length; i++){
-        everyone.append('<div class="row">' +
-                        '<div class= "col-md-12 text-center">'+
-                        '<img src="assets/' + data[i].foto + '">' +
-                        '<h3>' + data[i].nombre + '</h3>' +
-                        '<p>Ingredientes: ' + data[i].ingredientes + '</p>' +
-                        '<p>Receta: ' + data[i].receta + '</p>' + '<p>Sede: ' + data[i].tipo + '</p>' +
-                          '</div>' +
-                        '</div>')
+        everyone.append('<div class=box> <h3 class= text-center>'+ data[i].nombre + '</h3> <div> <img class="photobox center-block" src="assets/' + data[i].foto + '"> </div> <h6><b>Porciones:</b> ' + data[i].porciones + '</h6> <p><b> Ingredientes:</b> ' + data[i].ingredientes + '</p> <p><b> Instrucciones:</b> ' + data[i].receta + '</p><p><b> Tipo de Comida:</b> ' + data[i].tipo + '</p></div>')
     }
   }
 })
-
-
-/*
-* Función para postear recetas
-*/
-
-  $('#post').click(function(){
-    //Guardando todos los valores en una variable.
-    var photo= $('#inputfiles').val();
-    var name= $('#title').val();
-    var recipe= $('#recipe').val();
-    //Vaciando los  input.
-    $('#inputfiles').val('');
-    $('#title').val('');
-    $('#recipe').val('');
-    //Contenedor donde irán los nuevos comentarios.
-    var contenedor= $('.newpost');
-    //Ingresando comentario en una caja de comentario.
-    contenedor.append('<div class=box>'+ photo +'</div>')
-
-
-
-  })
