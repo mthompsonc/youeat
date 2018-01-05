@@ -1,29 +1,3 @@
-/*Previsualizar imagen*/
-function archivo(evt) {
-      var files = evt.target.files; // FileList object
-
-        //Obtenemos la imagen del campo "file".
-      for (var i = 0, f; f = files[i]; i++) {
-           //Solo admitimos imágenes.
-           if (!f.type.match('image.*')) {
-                continue;
-           }
-
-           var reader = new FileReader();
-
-           reader.onload = (function(theFile) {
-               return function(e) {
-               // Creamos la imagen.
-                      document.getElementById("list").innerHTML = ['<img class="preview" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-               };
-           })(f);
-
-           reader.readAsDataURL(f);
-       }
-}
-
-      document.getElementById('files').addEventListener('change', archivo, false);
-
 /*
 * Función para crear registro de usuario en Firebase
 */
@@ -143,11 +117,6 @@ function nouser(){
     $('#about').show();
     $('#myHome').hide();
     $('#profile2').hide();
-  })
-
-  $('#register').click(function(){
-    $('#loginModal').show();
-    console.log("holi");
   })
 }
 
@@ -282,3 +251,26 @@ $('#categorias').on('change', function(){
     }
   }
 })
+
+
+/*
+* Función para postear recetas
+*/
+
+  $('#post').click(function(){
+    //Guardando todos los valores en una variable.
+    var photo= $('#inputfiles').val();
+    var name= $('#title').val();
+    var recipe= $('#recipe').val();
+    //Vaciando los  input.
+    $('#inputfiles').val('');
+    $('#title').val('');
+    $('#recipe').val('');
+    //Contenedor donde irán los nuevos comentarios.
+    var contenedor= $('.newpost');
+    //Ingresando comentario en una caja de comentario.
+    contenedor.append('<div class=box>'+ photo +'</div>')
+
+
+
+  })
