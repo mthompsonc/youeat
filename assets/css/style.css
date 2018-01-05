@@ -80,3 +80,11 @@ display: block;
 line-height: 1.428571429;
 color: #999;
 }
+
+
+/*Imagenes recetas*/
+.img-edit img {
+  max-width: 100%;
+
+}
+
