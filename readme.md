@@ -1,14 +1,8 @@
 # You Eat: Red Social.
 
-#### Descripción
 You Eat es una red social de recetas rápidas, las cuales se pueden filtrar por tipo: bebestibles, plato de fondo, postres, Panadería/Pastelería. Donde existen muchos usuarios compartiendos sus propias recetas, a los cuales podrás seguir y compartir.
 
-***
-**ScreenShot**
-![Alt text](https://image.ibb.co/gDkxEc/Fire_Shot_Capture_045_You_Eat_https_mthompsonc_github_io_youeat.png)
+![screenshot](https://user-images.githubusercontent.com/32280744/37937409-ee1f4346-312f-11e8-8229-6f55e9b6cafb.png)
 
-
-#### Trabajo hecho por:
-##### Jocelyn Parada
-##### María Paz Thompson
-***
+## Desarrollado para 
+[Laboratoria](http://laboratoria.la)
